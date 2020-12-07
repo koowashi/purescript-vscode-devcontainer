@@ -1,0 +1,11 @@
+ARG NODE_VERSION=latest
+
+FROM node:${NODE_VERSION}
+
+ARG PURESCRIPT_VERSION=latest
+ARG SPAGO_VERSION=latest
+ARG PARCEL_VERSION=latest
+
+RUN yarn global add "purescript@${PURESCRIPT_VERSION}" "spago@${SPAGO_VERSION}" "parcel@${PARCEL_VERSION}"
+
+CMD ["bash"]
